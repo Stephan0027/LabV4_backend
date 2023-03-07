@@ -1,0 +1,33 @@
+{
+  "name": "labv4",
+  "version": "1.0.0",
+  "description": "lab 4 hkr",
+  "main": "server.js",
+  "scripts": {
+    "runServer": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Stephan0027/LabV4_backend.git"
+  },
+  "keywords": [
+    "backend",
+    "hkr",
+    "lab4"
+  ],
+  "author": "stephan hek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Stephan0027/LabV4_backend/issues"
+  },
+  "homepage": "https://github.com/Stephan0027/LabV4_backend#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "nodemon": "^2.0.21",
+    "sqlite3": "^5.1.4"
+  }
+}
