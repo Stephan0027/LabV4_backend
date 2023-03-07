@@ -41,10 +41,7 @@ function getCallback(reject, resolve) {
 //Check login credentials
 async function loginUser(name, password) {
   let user = await getUser(name)
-  console.log(user)
-
   let users = await getAllUsers();
-  console.log(users);
 
   //check if user exists
   if (user.length === 0) {
@@ -62,7 +59,7 @@ async function loginUser(name, password) {
 }
 
 //Add new user
-async function registerUser(name, role, password) {
+async function registerUser(name, password, role) {
   //check if user exists
   let user = await getUser(name)
   if (user.length > 0) {
@@ -90,4 +87,4 @@ async function registerUser(name, role, password) {
 
 
 
-module.exports = { getAllUsers, loginUser, registerUser }
+module.exports = { getAllUsers, loginUser, registerUser, getUser }
