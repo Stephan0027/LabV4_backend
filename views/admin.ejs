@@ -15,6 +15,31 @@
   <p>click on one of the links below</p>
 
   <a href="/start">main section</a><br>
+  <br>
+  <table>
+    <tr>
+      <th>USERID</th>
+      <th>USERNAME</th>
+      <th>ROLE</th>
+      <th>PASSWORD</th>
+    </tr>
+    <% users.forEach(function(user) { %>
+      <tr>
+        <th>
+          <%= user.userID %>
+        </th>
+        <th>
+          <%= user.name %>
+        </th>
+        <th>
+          <%= user.role %>
+        </th>
+        <th>
+          <%= user.password %>
+        </th>
+      </tr>
+      <% }); %>
+  </table>
 </body>
 
 </html>

@@ -7,12 +7,15 @@ const bcrypt = require('bcrypt');
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
+
+app.use(express.static(__dirname + "/public"))
+
 const database = require('./database');
 const auth = require('./authentication');
 
 
 //General variables
-const portNr = 1234;
+const portNr = 2345;
 let currentToken;
 let currentUserInfo;
 
@@ -112,8 +115,11 @@ app.get('/start', (req, res) => {
 
 
 //admin page (login required)
-app.get('/admin', (req, res) => {
-  res.render("admin.ejs");
+app.get('/admin', async (req, res) => {
+  let users = await database.getAllUsers();
+  console.log(users);
+
+  res.render("admin.ejs", { users: users });
 })
 
 
