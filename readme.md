@@ -16,7 +16,7 @@ Enter the following commands in your terminal:
 - require('crypto').randomBytes(64).toString('hex')
 
 A textstring will be created. You can paste this in the .env file as follows:
-TOKEN = '<string>'
+TOKEN = 'random-string'
 
 
 
